@@ -50,15 +50,15 @@ We then grouped by `gameid` and transformed the numerical statistics using the z
 
 ### Univariate Analysis
 
-<iframe src="assets/univariate_plot-mid.html" width=800 height=600 frameBorder=0></iframe>
-<iframe src="assets/univariate_plot-jgl.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/univariate-plot-mid.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/univariate-plot-jgl.html" width=800 height=600 frameBorder=0></iframe>
 
 
 ### Bivariate Analysis
 
-<iframe src="assets/bivariate_plot-all.html" width=800 height=600 frameBorder=0></iframe>
-<iframe src="assets/bivariate_plot-kda.html" width=800 height=600 frameBorder=0></iframe>
-<iframe src="assets/bivariate_plot-dc.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/bivariate-plot-all.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/bivariate-plot-kda.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/bivariate-plot-dc.html" width=800 height=600 frameBorder=0></iframe>
 
 
 ### Interesting Aggregates
