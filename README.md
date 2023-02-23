@@ -25,6 +25,7 @@ The dataset has in total of 149232 rows and 123 columns. We cleaned the dataset 
 | `totalgold`         | total gold per player                                        |
 | `total cs`          | total creep score per player                                 |
 
+
 | **Positions Abbreviation** | **Meaning** |
 | -------------------------- | ----------- |
 | *top*                      | top         |
@@ -41,7 +42,7 @@ The first step of our data cleaning process was to check for missingness in our 
 
 The second step of our data cleaning process was to standardize our statistics in the dataset. We transformed all our data to z-scores for each game. We did this by creating a helper function that calculates the z-score using the z-score formula:
 
-$$z(x_i) = \frac{x_i - \text{mean of } x}{\text{SD of }x}$$
+$$Z = \frac{X-\mu}{\sigma}$$
 
 We then grouped by `gameid` and transformed the numerical statistics using the z-score helper function. 
 
