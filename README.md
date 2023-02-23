@@ -56,6 +56,11 @@ We then grouped by `gameid` and transformed the numerical statistics using the z
 
 ### Bivariate Analysis
 
+<iframe src="assets/bivariate_plot-all.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/bivariate_plot-kda.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/bivariate_plot-dc.html" width=800 height=600 frameBorder=0></iframe>
+
+
 ### Interesting Aggregates
 
 
