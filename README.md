@@ -50,7 +50,9 @@ We then grouped by `gameid` and transformed the numerical statistics using the z
 
 ### Univariate Analysis
 
-<iframe src="assets/univariate_plot.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/univariate_plot-mid.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/univariate_plot-jgl.html" width=800 height=600 frameBorder=0></iframe>
+
 
 ### Bivariate Analysis
 
@@ -61,6 +63,8 @@ We then grouped by `gameid` and transformed the numerical statistics using the z
 ## Assessment of Missingness
 
 ### NMAR Analysis
+
+
 
 ### Missingness Dependency
 
