@@ -23,11 +23,6 @@ The dataset has in total of 149232 rows and 123 columns. We cleaned the dataset 
 | *total cs*          | total creep score per player                                 |
 
 
-| Syntax      | Description |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
-
 ## Cleaning and EDA
 
 ## Assessment of Missingness
