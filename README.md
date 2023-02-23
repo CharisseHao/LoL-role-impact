@@ -39,7 +39,9 @@ The dataset has a total of 149,232 rows and 123 columns. We cleaned the dataset 
 | `damagetochampions` | total damage dealt to other champions                        |
 | `totalgold`         | total gold per player                                        |
 | `total cs`          | total creep score per player                                 |
+
 <br />
+
 | **Positions Abbreviation** | **Meaning** |
 | -------------------------- | ----------- |
 | *top*                      | top         |
@@ -63,7 +65,7 @@ We then grouped by `gameid` and transformed the numerical statistics using the z
 
 ### Univariate Analysis
 
-<iframe src="assets/univariate-plot-mid.html" width=400 height=300 frameBorder=0></iframe> | <iframe src="assets/univariate-plot-jng.html" width=400 height=300 frameBorder=0></iframe>
+| <iframe src="assets/univariate-plot-mid.html" width=400 height=300 frameBorder=0></iframe> | <iframe src="assets/univariate-plot-jng.html" width=400 height=300 frameBorder=0></iframe> |
 
 
 ### Bivariate Analysis
