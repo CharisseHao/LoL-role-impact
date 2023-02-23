@@ -31,10 +31,22 @@ The dataset has in total of 149232 rows and 123 columns. We cleaned the dataset 
 
 ### Data Cleaning
 
+### Univariate Analysis
+
+### Bivariate Analysis
+
+### Interesting Aggregates
+
 ---
 
 ## Assessment of Missingness
+
+### NMAR Analysis
+
+### Missingness Dependency
+
 ---
 
 ## Hypothesis Testing
+
 ---
