@@ -21,7 +21,7 @@ Contributors: Charisse Hao and Nicole Zhang
 ## Introduction
 Welcome to Summoner’s Rift! League of Legends (LoL) is a popular online multiplayer battle arena game, with millions of active players worldwide. The game's massive player base makes it an excellent source of data for researchers and data scientists interested in exploring various aspects of the game, from player behavior to gameplay mechanics. 
 
-League of Legends is a competitive game, so it is natural for players to want to dominate their games and achieve victory. However, what is the best way to obtain this goal? In League of Legends, a team consists of five players who each fulfill a specific role on the team. There are five roles: top, jungle, middle, bottom, and support. If players want to carry their team to victory, they might want to pick the best role to do so. **Thus, we decided to conduct our data analysis on which role is the most impactful in the overall duration of the game.** 
+League of Legends is a competitive game, so it is natural for players to want to dominate their games and achieve victory. However, what is the best way to obtain this goal? Two teams, consisting of five players each, battle to destroy the opposing team's center base known as the Nexus. Each teams' players fulfill a specific role on the team - selecting to play one of the five roles: jungle, middle, bottom, or support. If players want to carry their team to victory, they might want to pick the best role to do so. **Thus, we decided to conduct our data analysis on which role is the most impactful in the overall duration of the game.** 
 
 The dataset we used to conduct this analysis is the [2022 League of Legends Esports Stats dataset](https://drive.google.com/file/d/1EHmptHyzY8owv0BAcNKtkQpMwfkURwRy/view?usp=sharing) provided by Oracle's Elixir, a website that provides advanced statistics and analysis tools for the game. This dataset contains a comprehensive collection of data from professional League of Legends matches, including detailed information on player and team performance, game events, and match outcomes. The dataset contains information on thousands of matches, covering various tournaments and competitions.
 
@@ -66,7 +66,7 @@ We then grouped by `gameid` and transformed the numerical statistics using the z
 ### Univariate Analysis
 
 <p float = 'left'> 
-    <iframe src="assets/univariate-plot-mid.html" width=400 height=300 frameBorder=0></iframe>  
+    <iframe src="assets/univariate-plot-mid.html" width=400 height=300 frameBorder=0></iframe>
     <iframe src="assets/univariate-plot-jng.html" width=400 height=300 frameBorder=0></iframe> 
 </p>
 
