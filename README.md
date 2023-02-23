@@ -51,7 +51,7 @@ We then grouped by `gameid` and transformed the numerical statistics using the z
 ### Univariate Analysis
 
 <iframe src="assets/univariate-plot-mid.html" width=800 height=600 frameBorder=0></iframe>
-<iframe src="assets/univariate-plot-jgl.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/univariate-plot-jng.html" width=800 height=600 frameBorder=0></iframe>
 
 
 ### Bivariate Analysis
