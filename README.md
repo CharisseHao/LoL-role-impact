@@ -11,6 +11,7 @@ The dataset we used to conduct this analysis is the League of Legends Esports St
 ### Dataset Statistics and Definitions:
 The dataset has in total of 149232 rows and 123 columns. We cleaned the dataset to only use the data we need for our analysis, so we used 124360 rows and 9 columns. Below is the definition of the columns we used from this dataset. 
 | **Column Name**     | **Definition**                                               |
+| ------------------- | ------------------------------------------------------------ |
 | *gameid*            | game ID                                                      |
 | *datacompleteness*  | indicates if the data for this match was complete or partial |
 | *position*          | player’s position                                            |
