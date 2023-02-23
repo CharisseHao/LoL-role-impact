@@ -66,16 +66,17 @@ We then grouped by `gameid` and transformed the numerical statistics using the z
 ### Univariate Analysis
 
 <p float = 'left'> 
-    <iframe src="assets/uni-fig-mid.html" width=450 height=400 frameBorder=0></iframe>
-    <iframe src="assets/uni-fig-bot.html" width=450 height=400 frameBorder=0></iframe> 
+    <iframe src="assets/uni-fig-mid.html" width=400 height=400 frameBorder=0></iframe>
+    <iframe src="assets/uni-fig-bot.html" width=400 height=400 frameBorder=0></iframe> 
 </p>
 
+For each role (mid, bot, top, sup, and sup), we decided to explore the average z-score of the statistics we were interested in. These statistics included: KDA, total gold, total creep score, and damage to champions. 
 
 ### Bivariate Analysis
 
-<iframe src="assets/bivariate-plot-all.html" width=800 height=600 frameBorder=0></iframe>
-<iframe src="assets/bivariate-plot-kda.html" width=800 height=600 frameBorder=0></iframe>
-<iframe src="assets/bivariate-plot-dc.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/bivariate-plot-all.html" width=800 height=400 frameBorder=0></iframe>
+<iframe src="assets/bivariate-plot-kda.html" width=800 height=400 frameBorder=0></iframe>
+<iframe src="assets/bivariate-plot-dc.html" width=800 height=400 frameBorder=0></iframe>
 
 
 ### Interesting Aggregates
