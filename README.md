@@ -1,7 +1,7 @@
----
+
 # LoL-role-impact
 Data analysis on the impact of different roles from League of Legends for a DSC80 project at UCSD. 
----
+
 
 ## Introduction
 Welcome to Summoner’s Rift! League of Legends (LoL) is a popular online multiplayer battle arena game, with millions of active players worldwide. The game's massive player base makes it an excellent source of data for researchers and data scientists interested in exploring various aspects of the game, from player behavior to gameplay mechanics. 
@@ -25,9 +25,13 @@ The dataset has in total of 149232 rows and 123 columns. We cleaned the dataset 
 | `totalgold`         | total gold per player                                        |
 | `total cs`          | total creep score per player                                 |
 
-
-
----
+| **Positions Abbreviation** | **Meaning** |
+| -------------------------- | ----------- |
+| *top*                      | top         |
+| *jng*                      | jungle      |
+| *mid*                      | middle      |
+| *bot*                      | bottom      |
+| *sup*                      | support     |
 
 
 ## Cleaning and EDA
@@ -49,7 +53,7 @@ We then grouped by `gameid` and transformed the numerical statistics using the z
 
 ### Interesting Aggregates
 
----
+
 
 ## Assessment of Missingness
 
@@ -57,8 +61,7 @@ We then grouped by `gameid` and transformed the numerical statistics using the z
 
 ### Missingness Dependency
 
----
+
 
 ## Hypothesis Testing
 
----
