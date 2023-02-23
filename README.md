@@ -21,7 +21,7 @@ Contributors: Charisse Hao and Nicole Zhang
 ## Introduction
 Welcome to Summoner’s Rift! [League of Legends (LoL)](https://en.wikipedia.org/wiki/League_of_Legends) is a popular online multiplayer battle arena game, with millions of active players worldwide. The game's massive player base makes it an excellent source of data for researchers and data scientists interested in exploring various aspects of the game, from player behavior to gameplay mechanics. 
 
-League of Legends is a competitive game, so it is natural for players to want to dominate their games and achieve victory. However, what is the best way to obtain this goal? Two teams, consisting of five players each, battle to destroy the opposing team's center base known as the Nexus. Each teams' players fulfill a specific role on the team - selecting to play one of the five roles: jungle, middle, bottom, or support. If players want to carry their team to victory, they might want to pick the best role to do so. **Thus, we decided to conduct our data analysis on which role is the most impactful in the overall duration of the game.** 
+League of Legends is a competitive game, so it is natural for players to want to dominate their games and achieve victory. However, what is the best way to obtain this goal? Two teams, consisting of five players each, battle to destroy the opposing team's center base known as the Nexus. Each team's players fulfill a specific role on the team - selecting to play one of the five roles: top, middle, bottom, support, or jungle. If players want to carry their team to victory, they might want to pick the best role to do so. **Thus, we decided to conduct our data analysis on which role is the most impactful in the overall duration of the game.** 
 
 The dataset we used to conduct this analysis is the [2022 League of Legends Esports Stats dataset](https://drive.google.com/file/d/1EHmptHyzY8owv0BAcNKtkQpMwfkURwRy/view?usp=sharing) provided by Oracle's Elixir, a website that provides advanced statistics and analysis tools for the game. This dataset contains a comprehensive collection of data from professional League of Legends matches, including detailed information on player and team performance, game events, and match outcomes. The dataset contains information on thousands of matches, covering various tournaments and competitions.
 
@@ -41,6 +41,7 @@ The dataset has a total of 149,232 rows and 123 columns. We cleaned the dataset 
 | `total cs`          | total creep score per player                                 |
 
 <br />
+\* Note: we will be using the words "role" and "position" interchangeably 
 
 | **Positions Abbreviation** | **Meaning** |
 | -------------------------- | ----------- |
@@ -65,6 +66,7 @@ We then grouped by `gameid` and transformed the numerical statistics using the z
 
 ### Univariate Analysis
 For our univariate analysis, we decided to focus on investigating the distribution of each statistic’s z-scores depending on the position column. In order to generate these plots, we grouped by position before calculating the average z-score for each statistic we were investigating. These included: KDA, total gold, total creep score, and damage to champions. 
+
 <p float = 'left'> 
     <iframe src="assets/univariate-plots/uni-fig-mid.html" width=410 height=275 frameBorder=0></iframe>
     <iframe src="assets/univariate-plots/uni-fig-bot.html" width=410 height=275 frameBorder=0></iframe> 
@@ -76,6 +78,7 @@ For our univariate analysis, we decided to focus on investigating the distributi
 </p>
 </p>
 </p>
+
 In the bar graphs provided above, each graph corresponds to a different role or position, with each bar on the x-axis representing a different statistic while the y-axis indicates the average z-score. Upon taking a closer look at these graphs, the first thing we noticed was that roles such as middle and top had positive average z-scores for all statistics while top had a combination of positive and negative and roles such as support and jungle had average z-scores around or below zero. Based on this observation, the data seems to indicate middle and top roles have more impact in games overall than bottom, support, and jungle. 
 
 
