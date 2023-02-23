@@ -1,17 +1,32 @@
 
-# LoL-role-impact
+# Role Impact Analysis (League of Legends)
 Data analysis on the impact of different roles from League of Legends for a DSC80 project at UCSD. 
+Contributors: Charisse Hao and Nicole Zhang
+
+
+## Table of Contents
+- [Introduction](#introduction)
+    - [Dataset Statistics and Definitions](#dataset-statistics-and-definitions)
+- [Cleaning and EDA (Exploratory Data Analysis)](#cleaning-and-eda)
+    - [Data Cleaning](#data-cleaning)
+    - [Univariate Analysis](#univariate-analysis)
+    - [Bivariate Analysis](#bivariate-analysis)
+    - [Interesting Aggregates](#interesting-aggregates)
+- [Assessment of Missingness](#assessment-of-missingness)
+    - [NMAR Analysis](#nmar-analysis)
+    - [Missingness Dependency](#missingness-dependency)
+- [Hypothesis Testing](#hypothesis-testing)
 
 
 ## Introduction
 Welcome to Summoner’s Rift! League of Legends (LoL) is a popular online multiplayer battle arena game, with millions of active players worldwide. The game's massive player base makes it an excellent source of data for researchers and data scientists interested in exploring various aspects of the game, from player behavior to gameplay mechanics. 
 
-League of Legends is a competitive game, so it is natural for players to want to dominate their games and achieve victory. However, what is the best way to obtain this goal? In League of Legends, a team consists of five players, who each fulfill a specific role on the team. The five roles are top, jungle, middle, bottom, and support. If players want to carry their team to victory, they might want to pick the best role to do so. **Thus, we decided to conduct our data analysis on which role is the most impactful in the overall duration of the game.** 
+League of Legends is a competitive game, so it is natural for players to want to dominate their games and achieve victory. However, what is the best way to obtain this goal? In League of Legends, a team consists of five players who each fulfill a specific role on the team. There are five roles: top, jungle, middle, bottom, and support. If players want to carry their team to victory, they might want to pick the best role to do so. **Thus, we decided to conduct our data analysis on which role is the most impactful in the overall duration of the game.** 
 
-The dataset we used to conduct this analysis is the League of Legends Esports Stats dataset provided by Oracle's Elixir, a website that provides advanced statistics and analysis tools for the game. This dataset contains a comprehensive collection of data from professional League of Legends matches, including detailed information on player and team performance, game events, and match outcomes. The dataset contains information on thousands of matches, covering various tournaments and competitions.
+The dataset we used to conduct this analysis is the [2022 League of Legends Esports Stats dataset](https://drive.google.com/file/d/1EHmptHyzY8owv0BAcNKtkQpMwfkURwRy/view?usp=sharing) provided by Oracle's Elixir, a website that provides advanced statistics and analysis tools for the game. This dataset contains a comprehensive collection of data from professional League of Legends matches, including detailed information on player and team performance, game events, and match outcomes. The dataset contains information on thousands of matches, covering various tournaments and competitions.
 
 ### Dataset Statistics and Definitions:
-The dataset has in total of 149232 rows and 123 columns. We cleaned the dataset to only use the data we need for our analysis, so we used 124360 rows and 9 columns. Below is the definition of the columns we used from this dataset.
+The dataset has a total of 149,232 rows and 123 columns. We cleaned the dataset to only use the data we need for our analysis, so we used 124,360 rows and 9 columns. Below is the definition of the columns we used from this dataset.
 
 | **Column Name**     | **Definition**                                               |
 | ------------------- | ------------------------------------------------------------ |
@@ -26,6 +41,7 @@ The dataset has in total of 149232 rows and 123 columns. We cleaned the dataset 
 | `total cs`          | total creep score per player                                 |
 
 
+
 | **Positions Abbreviation** | **Meaning** |
 | -------------------------- | ----------- |
 | *top*                      | top         |
@@ -35,7 +51,7 @@ The dataset has in total of 149232 rows and 123 columns. We cleaned the dataset 
 | *sup*                      | support     |
 
 
-## Cleaning and EDA
+## Cleaning and EDA (Exploratory Data Analysis)
 
 ### Data Cleaning
 The first step of our data cleaning process was to check for missingness in our dataset. We found that the column damagetochampions had missing values when the value for datacompleteness was `partial`. We then dropped the rows where `datacompleteness` is partial, which got rid of all missing values in our dataset.
