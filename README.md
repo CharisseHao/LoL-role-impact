@@ -26,13 +26,7 @@ The dataset has in total of 149232 rows and 123 columns. We cleaned the dataset 
 | `total cs`          | total creep score per player                                 |
 
 
-| **Positions Abbreviation** | **Meaning** |
-| -------------------------- | ----------- |
-| *top*                      | top         |
-| *jng*                      | jungle      |
-| *mid*                      | middle      |
-| *bot*                      | bottom      |
-| *sup*                      | support     |
+
 ---
 
 
