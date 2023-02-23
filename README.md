@@ -66,8 +66,8 @@ We then grouped by `gameid` and transformed the numerical statistics using the z
 ### Univariate Analysis
 
 <p float = 'left'> 
-    <iframe src="assets/univariate-plot-mid.html" width=400 height=300 frameBorder=0></iframe>
-    <iframe src="assets/univariate-plot-jng.html" width=400 height=300 frameBorder=0></iframe> 
+    <iframe src="assets/uni-fig-mid.html" width=400 height=300 frameBorder=0></iframe>
+    <iframe src="assets/uni-fig-bot.html" width=400 height=300 frameBorder=0></iframe> 
 </p>
 
 
