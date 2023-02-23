@@ -64,7 +64,7 @@ We then grouped by `gameid` and transformed the numerical statistics using the z
 
 
 ### Univariate Analysis
-For our univariate analysis, we decided to focus on investigating the distribution of each statistic’s z-scores depending on the position column. In order to generate these plots, we grouped by position before calculating the z-score for each statistic we were investigating. These included: KDA, total gold, total creep score, and damage to champions. 
+For our univariate analysis, we decided to focus on investigating the distribution of each statistic’s z-scores depending on the position column. In order to generate these plots, we grouped by position before calculating the average z-score for each statistic we were investigating. These included: KDA, total gold, total creep score, and damage to champions. 
 
 <p float = 'left'> 
     <iframe src="assets/univariate-plots/uni-fig-mid.html" width=410 height=275 frameBorder=0></iframe>
@@ -74,7 +74,9 @@ For our univariate analysis, we decided to focus on investigating the distributi
     <iframe src="assets/univariate-plots/uni-fig-sup.html" width=410 height=300 frameBorder=0></iframe> 
 <p float = 'left'> 
     <iframe src="assets/univariate-plots/uni-fig-jng.html" width=410 height=300 frameBorder=0></iframe>
+</p>
 
+In the bar graphs provided above, each graph corresponds to a different role or position, with each bar on the x-axis representing a different statistic while the y-axis indicates the average z-score. Upon taking a closer look at these graphs, the first thing we noticed was that roles such as middle and top had positive average z-scores for all statistics while top had a combination of positive and negative and roles such as support and jungle had average z-scores around or below zero. Based on this observation, the data seems to indicate middle and top roles have more impact in games overall than bottom, support, and jungle. 
 
 ### Bivariate Analysis
 
