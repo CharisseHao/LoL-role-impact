@@ -135,7 +135,7 @@ After doing our exploratory data analysis, we chose to answer the general questi
 - Significance level: 5% (0.05)
 - Impact variables: KDA, damage to champions, total gold
 
-We used the total variation distance for this test because we are comparing the difference between the different positions (top, jng, mid, bot, sup), which are categorical distributions. We chose the most commonly used significance level because a p-value less than 0.05 is statistically significant. It indicates strong evidence against the null hypothesis since there is less than a 5% probability that the null hypothesis is correct. 
+We used the total variation distance for this test because we are comparing the difference between the different positions (top, jng, mid, bot, sup), which are categorical distributions. We chose the most commonly used significance level because a p-value less than 0.05 is statistically significant. It indicates strong evidence against the null hypothesis since there is less than a 5% probability that the null hypothesis is correct. We decided to not use `total cs` for our hypothesis test because total cs correlates with the total gold a player has.
 
 We did three separate hypothesis tests for the three impact variables: KDA, damage to champions, and total gold. 
 
