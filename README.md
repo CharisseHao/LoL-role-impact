@@ -2,7 +2,7 @@
 # Dominating the Rift: Uncovering the Most Impactful Position in League of Legends
 A DSC80 project analyzing the impact of different roles in League of Legends. 
 
-Contributors: Charisse Hao and Nicole Zhang
+Contributors: [Charisse Hao](https://www.linkedin.com/in/charisse-hao/) and [Nicole Zhang](https://www.linkedin.com/in/nicole-zhang-31a09122b/)
 
 
 ## Table of Contents
