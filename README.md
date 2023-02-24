@@ -156,7 +156,7 @@ After conducting our exploratory data analysis, we chose to answer the general q
 - Significance level: 5% (0.05)
 - Impact variables: KDA, Damage to Champions, Total Gold
 
-We used the total variation distance (TVD) as our test statistic for this test because we are comparing the difference between different positions (top, jungle, middle, bottom, and support), which are categorical distributions. We chose the most commonly used significance level, as a p-value less than 0.05 is considered statistically significant. By using this p-value, it indicates strong evidence against the null hypothesis since there is less than a 5% probability that we see a result as or more extreme than our observed result. 
+We used the total variation distance (TVD) as our test statistic for this test because we are comparing the difference between different positions (top, jungle, middle, bottom, and support), which are categorical distributions. We chose the most commonly used significance level, as a p-value less than 0.05 is considered statistically significant. By using this p-value, it indicates strong evidence against the null hypothesis since there is less than a 5% probability that we see a result as or more extreme than our observed result by chance. 
 
 We decided to drop `total cs` from our hypothesis test since total cs correlates with the total gold a player has. We then did three separate hypothesis tests for each of the three impact variables: KDA, damage to champions, and total gold. 
 
