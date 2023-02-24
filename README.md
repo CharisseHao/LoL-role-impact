@@ -178,7 +178,9 @@ We decided to not use `total cs` for our hypothesis test because total cs correl
 Therefore, we reject the null hypothesis—all roles do not have the same impact overall. Since we know that all roles do not have the same impact overall, we shifted our focus to only look at one variable (damage to champions). We chose to use damage because we believe that the KDA statistic may not be a good statistic to use to compare as seen under [Interesting Aggregates](#interesting-aggregates). For example, a player could be focused on by the opposing team because they were being impactful. As a result, this would lower their KDA since that player could have a lot of deaths. We also did not use total gold because the gold obtained by players is used to buy items to deal more damage to the opposing team. Hence, we selected `damagetochampions` as the variable to use. 
 
 Looking at the box plot titled: *Avg Stat Z-score for All Positions* under [Bivariate Analysis](#bivariate-analysis), we notice that middle and bottom are the only positions that have positive z-scores for all variables (KDA, total gold, total cs, damage to champions). We then asked a follow-up question: which role has more impact overall for damage to champions—bottom or middle? We conducted a one-tailed hypothesis test. 
+
 Null hypothesis: Bottom and middle have the same average z-score for damage to champions. 
+
 Alternative hypothesis: Bottom has a higher average z-score for damage to champions than middle. 
 - Test statistic: Difference in Mean
 - Significance Level: 5% (0.05)
