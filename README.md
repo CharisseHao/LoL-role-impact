@@ -120,13 +120,30 @@ We believe that the column `ban5` in our dataset is not missing at random (NMAR)
 
 
 ### Missingness Dependency
+When we first began exploring this dataset, we were interested in overall data and data collected at the 15 minute mark. We noticed many of the columns corresponding to data collected at this time mark had missing values, so we decided to investigate the missingness dependency of the column `killsat15`.
+
+The first column we tested missingness against was the column `datacompleteness`.
+Null Hypothesis: Distribution of `'datacompleteness'` when `'killsat15'` is missing is the same as the distribution of `'datacompleteness'` when `'killsat15'` is not missing
+Alternative Hypothesis: Distribution of `'datacompleteness'` when `'killsat15'` is missing is *not* the same as the distribution of `'datacompleteness'` when `'killsat15'` is not missing
+Included below is the graph portraying the distribution of `datacompleteness` when `killsat15` is and is not missing.
 
 <iframe src="assets/missingness-plots/miss-data-completeness.html" width=800 height=400 margin-left="auto" margin-right="auto" frameBorder=0></iframe>
+
+We performed a permutation test to determine whether or not the missingness of `killsat15` was dependent on `datacompleteness` using total variation distance (TVD) as our test statistic. Below is the plot which illustrates the empirical distribution of the TVDs, with our observed TVD marked as a red vertical line.  
+
 <iframe src="assets/missingness-plots/fig-empirical-dc.html" width=800 height=400 frameBorder=0></iframe>
+
+From here, we calculated the p-value by comparing the observed TVD to the TVDs found through permutation testing, and the resulting p-value was 0. Since our p-value is less than the significance level of 0.05, we reject the null hypothesis, and therefore it seems that missingness in `killsat15` is dependent on `datacompleteness`.
+
+The second column we tested missingness against was the column `position`. 
+Null Hypothesis: Distribution of `'position'` when `'killsat15'` is missing is the same as the distribution of `'position'` when `'killsat15'` is not missing
+Alternative Hypothesis: Distribution of `'position'` when `'killsat15'` is missing is *not* the same as the distribution of `'position'` when `'killsat15'` is not missing
+Following the same steps as above, we plotted the distribution of `position` when `killsat15` is and is not missing. Then, we carried out a permutation test using TVD as the test statistic again.
+
 <p align="center"><iframe src="assets/missingness-plots/miss-position.html" width=800 height=400 frameBorder=0></iframe></p>
 <iframe src="assets/missingness-plots/fig-empirical-position.html" width=800 height=400 frameBorder=0></iframe>
 
-
+By comparing the TVDs found through permutation testing to the observed TVD, we found the resulting p-value was 1. Since our p-value is greater than the significance level of 0.05, we fail to reject the null, and therefore it seems that the missingness in `killsat15` is *not* dependent on `position`
 
 ## Hypothesis Testing
 
