@@ -131,13 +131,19 @@ We did three separate hypothesis tests for the three impact variables: KDA, dama
 - P-value: 0.0
 - Conclusion: since the p-value is less than the significance level of 0.05, we reject the null hypothesis. All roles do not have the same average KDA z-score.
 
+<iframe src="assets/hypo-test-kda.html" width=800 height=400 frameBorder=0></iframe>
+
 **Results for Damage to Champions:**
 - P-value: 0.0
 - Conclusion: since the p-value is less than the significance level of 0.05, we reject the null hypothesis. All roles do not have the same average damage to champions z-score.
 
+<iframe src="assets/hypo-test-dmg.html" width=800 height=400 frameBorder=0></iframe>
+
 **Results for Total Gold:**
 - P-value: 0.0
-- Conclusion: since the p-value is less than the significance level of 0.05, we reject the null hypothesis. All roles do not have the same average total gold z-score. 
+- Conclusion: since the p-value is less than the significance level of 0.05, we reject the null hypothesis. All roles do not have the same average total gold z-score.
+
+<iframe src="assets/hypo-test-gold.html" width=800 height=400 frameBorder=0></iframe>
 
 Therefore, we reject the null hypothesis—all roles do not have the same impact overall. Since we know that all rolls do not have the same impact overall, we shifted our focus to only look at one variable (damage to champions). We chose to use damage because we believe that the KDA statistic may not be a good statistic to use to compare as seen under [Interesting Aggregates](#interesting-aggregates). For example, a player could be focused on by the opposing team because they were the carry. As a result, lowering their KDA since that player could have a lot of deaths. We also did not use total gold because the gold obtained by players is used to buy items to deal more damage to the opposing team. Hence, we selected `damagetochampions` as the variable to use. 
 
@@ -150,3 +156,5 @@ We used the difference in mean as our test statistic because we are comparing qu
 **Results:**
 - P-value: 0.0
 - Conclusion: since the p-value is less than the significance level of 0.05, we reject the null hypothesis. Bottom and middle do not have the same average z-score for damage to champions. 
+
+<iframe src="assets/hypo-test-dtc-diff.html" width=800 height=400 frameBorder=0></iframe>
