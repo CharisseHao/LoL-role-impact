@@ -83,10 +83,15 @@ In the bar graphs provided above, each graph corresponds to a different role or 
 
 
 ### Bivariate Analysis
+In this section, we wanted to continue comparing the statistics’ z-scores across all positions. We combined all positions’ average z-scores into one bar graph to make comparisons easier, as well as creating box plots to perform further analysis on the distribution of z-scores for each statistic. 
 
 <iframe src="assets/bivariate-plot-all.html" width=800 height=400 frameBorder=0></iframe>
+
+The graph above contains each positions’ average z-score across all statistics. Along the x-axis, it specifies which position the bars belong to, and the y-axis once again indicates the average z-score. The bins for each position are color coded based on the legend, with blue corresponding to KDA, red to total gold, green to total creep score, and purple to damage to champions. By plotting all positions side-by-side, we were able to deduce that bottom has the overall highest average z-scores for all statistics, while support has the lowest average z-score for all statistics besides KDA. 
+
 <iframe src="assets/bivariate-plot-kda.html" width=800 height=400 frameBorder=0></iframe>
 <iframe src="assets/bivariate-plot-dc.html" width=800 height=400 frameBorder=0></iframe>
+
 
 
 ### Interesting Aggregates
