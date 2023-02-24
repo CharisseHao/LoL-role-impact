@@ -149,9 +149,9 @@ By comparing the TVDs found through permutation testing to the observed TVD, we 
 After conducting our exploratory data analysis, we chose to answer the general question: do all roles have the same impact overall? 
 Null hypothesis: All roles have the same impact overall. 
 Alternative hypothesis: All roles do not have the same impact overall.
-- Test statistic: Total variation distance (TVD)
+- Test statistic: Total Variation Distance (TVD)
 - Significance level: 5% (0.05)
-- Impact variables: KDA, damage to champions, total gold
+- Impact variables: KDA, Damage to Champions, Total Gold
 
 We used the total variation distance (TVD) for this test because we are comparing the difference between the different positions (top, jng, mid, bot, sup), which are categorical distributions. We chose the most commonly used significance level because a p-value less than 0.05 is statistically significant. It indicates strong evidence against the null hypothesis since there is less than a 5% probability that the null hypothesis is correct. 
 
@@ -182,7 +182,7 @@ Null hypothesis: Bottom and middle have the same average z-score for damage to c
 Alternative hypothesis: Bottom has a higher average z-score for damage to champions than middle. 
 - Test statistic: Difference in Mean
 - Significance Level: 5% (0.05)
-- Impact variable: damage to champions
+- Impact variable: Damage to Champions
 
 We used the difference in mean as our test statistic because we are comparing quantitative distributions and the mean is not the same for the two distributions. We used the same significance level as stated above. 
 
