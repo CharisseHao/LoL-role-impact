@@ -43,7 +43,7 @@ The dataset has a total of 149,232 rows and 123 columns. We cleaned the dataset 
 | `totalgold`         | total gold per player                                        |
 | `total cs`          | total creep score per player                                 |
 
-\* Note: we will be using the words "role" and "position" interchangeably 
+\* Note: we will be using the words "role" and "position" interchangeably. 
 
 | **Positions Abbreviation** | **Meaning** |
 | -------------------------- | ----------- |
