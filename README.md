@@ -117,7 +117,7 @@ Unlike the preceding overlaid histogram, this plot supports the observation made
 ## Assessment of Missingness
 
 ### NMAR Analysis
-We believe that the column `ban5` in our dataset is not missing at random (NMAR). Some values are missing in this column with no apparent pattern, so we think that some teams have either forgotten to ban or did not see the need to ban a fifth champion. This would make the missing data point dependent on the actual value of the missing data point itself, which makes this NMAR. To make this column missing at random (MAR), we can collect more data on whether or not the total 5 bans for each team were complete and name the new column `bancompleteness`. With this new column, the `ban5` column will no longer be dependent on the actual value itself, but it will depend on `bancompleteness` instead. 
+We believe that the column `ban5` in our dataset is not missing at random (NMAR). Values are missing in this column with no apparent pattern, leading us to consider circumstances where some teams may have either forgotten to ban or did not see the need to ban a fifth champion. This would make the missing data points dependent on the actual value of the missing data point itself, causing the missingness to be NMAR. To make this column missing at random (MAR), we can collect more data on whether or not the total 5 bans for each team were complete and name the new column `bancompleteness`. With this new column, the `ban5` column will no longer be dependent on the actual value itself, but will instead depend on `bancompleteness`. 
 
 
 ### Missingness Dependency
