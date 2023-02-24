@@ -29,7 +29,7 @@ League of Legends is a competitive game, so it is natural for players to want to
 The dataset we used to conduct this analysis is the [2022 League of Legends Esports Stats dataset](https://drive.google.com/file/d/1EHmptHyzY8owv0BAcNKtkQpMwfkURwRy/view?usp=sharing) provided by Oracle's Elixir, a website that provides advanced statistics and analysis tools for the game. This dataset contains a comprehensive collection of data from professional League of Legends matches, including detailed information on player and team performance, game events, and match outcomes. The dataset contains information on thousands of matches, covering various tournaments and competitions.
 
 ### Dataset Statistics and Definitions:
-The dataset has a total of 149,232 rows and 123 columns. We cleaned the dataset to only use the data we need for our analysis, so we used 124,360 rows and 9 columns. Below is the definition of the columns we used from this dataset.
+The dataset has a total of 149,232 rows and 123 columns. We cleaned the dataset to only use the data we needed for our analysis, so our dataframe consisted of 124,360 rows and 9 columns. Below are the definitions of the columns we used from this dataset.
 
 | **Column Name**     | **Definition**                                               |
 | ------------------- | ------------------------------------------------------------ |
