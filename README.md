@@ -1,6 +1,7 @@
 
 # Dominating the Rift: Uncovering the Most Impactful Position in League of Legends
 A DSC80 project analyzing the impact of different roles in League of Legends. 
+
 Contributors: Charisse Hao and Nicole Zhang
 
 
@@ -84,17 +85,17 @@ In the bar graphs provided above, each graph corresponds to a different role or 
 ### Bivariate Analysis
 In this section, we wanted to continue comparing the statistics’ z-scores across all positions. We combined all positions’ average z-scores into one bar graph to make comparisons easier, as well as creating box plots to perform further analysis on the distribution of z-scores for each statistic. 
 
-<p style="text-align:center"><iframe src="assets/bivariate-plot-all.html" width=800 height=435 frameBorder=0></iframe></p>
+<p style="text-align:center"><iframe src="assets/bivariate-plot-all.html" width=800 height=435 align='center' frameBorder=0></iframe></p>
 
 The graph above contains each positions’ average z-score across all statistics. Along the x-axis, it specifies which position the bars belong to, and the y-axis once again indicates the average z-score. The bins for each position are color coded based on the legend, with blue corresponding to KDA, red to total gold, green to total creep score, and purple to damage to champions. By plotting all positions side-by-side, we were able to deduce that bottom has the overall highest average z-scores for all statistics, while support has the lowest average z-score for all statistics besides KDA. 
 
 The following box plots illustrate each position’s distribution of z-scores for KDA and damage to champions respectively. The x-axis specifies which position the box plot corresponds to and the y-axis represents the z-score. 
 
-<p style="text-align:center"><iframe src="assets/bivariate-plot-kda.html" width=800 height=435 frameBorder=0></iframe></p>
+<p style="text-align:center"><iframe src="assets/bivariate-plot-kda.html" width=800 height=435 align='center' frameBorder=0></iframe></p>
 
 Taking a closer look at this plot, we find that all positions seem to have relatively the same spread in z-scores, with the median ranging from around -0.1 to -0.5. The boxplot for top seems to be slightly lower compared to the others, and top and support are the only roles containing outliers. We also notice that the variance for top is comparably lower than the rest of the positions. This shows more consistency in KDA for top players, which suggests a less explosive playstyle for top. Once again, we notice the roles of middle and bottom have higher z-scores, as their box plots are higher than the other positions’.
 
-<p style="text-align:center"><iframe src="assets/bivariate-plot-dc.html" width=800 height=435 frameBorder=0></iframe></p>
+<p style="text-align:center"><iframe src="assets/bivariate-plot-dc.html" width=800 height=435 align='center' frameBorder=0></iframe></p>
 
 Unlike the previous boxplot, there is a lot more variance in the distribution of z-scores across each role. Top, middle, and bottom all seem to have similarly wide ranges, while jungle and support have much smaller ranges. Furthermore, jungle and support have the lowest medians at -0.55 and -1.23 respectively, and they also have the most outlying data points. On the other hand, middle and bottom continue to have the highest medians, which further implies that these two roles may be the most impactful overall. 
 
@@ -102,11 +103,11 @@ Unlike the previous boxplot, there is a lot more variance in the distribution of
 ### Interesting Aggregates
 To further explore the distribution of z-scores and the pattern we noticed of middle and top consistently having higher z-scores, we decided to plot all positions’ z-scores for KDA and total damage to champions in an overlaid histogram. For the following plots, the x-axis represents the z-score, the y-axis represents the number of players that fall within each z-score bin, and each color corresponds to a certain role based on the legend - blue is top, red is jungle, green is middle, purple is bottom, and support is orange. 
 
-<p style="text-align:center"><iframe src="assets/int-agg-plots/int-fig-kda.html" width=800 height=375 frameBorder=0></iframe></p>
+<p style="text-align:center"><iframe src="assets/int-agg-plots/int-fig-kda.html" width=800 height=375 align='center' frameBorder=0></iframe></p>
 
 This overlaid histogram seems to indicate that all roles have a similar spread in z-scores for KDA, contrasting to the plots we analyzed previously. Each bin appears to have a similar count for each role, and this conflicting observation led us to our null hypothesis: Do all roles have the same impact overall?
 
-<p style="text-align:center"><iframe src="assets/int-agg-plots/int-fig-dc.html" width=800 height=375 frameBorder=0></iframe></p>
+<p style="text-align:center"><iframe src="assets/int-agg-plots/int-fig-dc.html" width=800 height=375 align='center' frameBorder=0></iframe></p>
 
 Unlike the preceding overlaid histogram, this plot supports the observation made in previous sections - support generally has the lowest z-scores while middle, bottom, and top have the highest z-scores. 
 
@@ -125,11 +126,11 @@ Null Hypothesis: Distribution of `'datacompleteness'` when `'killsat15'` is miss
 Alternative Hypothesis: Distribution of `'datacompleteness'` when `'killsat15'` is missing is *not* the same as the distribution of `'datacompleteness'` when `'killsat15'` is not missing
 Included below is the graph portraying the distribution of `datacompleteness` when `killsat15` is and is not missing.
 
-<p style="text-align:center"><iframe src="assets/missingness-plots/miss-data-completeness.html" width=800 height=375 margin-left="auto" margin-right="auto" frameBorder=0></iframe></p>
+<p style="text-align:center"><iframe src="assets/missingness-plots/miss-data-completeness.html" width=800 height=375 align='center' frameBorder=0></iframe></p>
 
 We performed a permutation test to determine whether or not the missingness of `killsat15` was dependent on `datacompleteness` using total variation distance (TVD) as our test statistic. Below is the plot which illustrates the empirical distribution of the TVDs, with our observed TVD marked as a red vertical line.  
 
-<p style="text-align:center"><iframe src="assets/missingness-plots/fig-empirical-dc.html" width=800 height=425 frameBorder=0></iframe></p>
+<p style="text-align:center"><iframe src="assets/missingness-plots/fig-empirical-dc.html" width=800 height=425 align='center' frameBorder=0></iframe></p>
 
 From here, we calculated the p-value by comparing the observed TVD to the TVDs found through permutation testing, and the resulting p-value was 0. Since our p-value is less than the significance level of 0.05, we reject the null hypothesis, and therefore it seems that missingness in `killsat15` is dependent on `datacompleteness`.
 
@@ -138,8 +139,8 @@ Null Hypothesis: Distribution of `'position'` when `'killsat15'` is missing is t
 Alternative Hypothesis: Distribution of `'position'` when `'killsat15'` is missing is *not* the same as the distribution of `'position'` when `'killsat15'` is not missing
 Following the same steps as above, we plotted the distribution of `position` when `killsat15` is and is not missing. Then, we carried out a permutation test using TVD as the test statistic again.
 
-<p style="text-align:center"><iframe src="assets/missingness-plots/miss-position.html" width=800 height=375 frameBorder=0></iframe></p>
-<p style="text-align:center"><iframe src="assets/missingness-plots/fig-empirical-position.html" width=800 height=425 frameBorder=0></iframe></p>
+<p style="text-align:center"><iframe src="assets/missingness-plots/miss-position.html" width=800 height=375 align='center' frameBorder=0></iframe></p>
+<p style="text-align:center"><iframe src="assets/missingness-plots/fig-empirical-position.html" width=800 height=425 align='center' frameBorder=0></iframe></p>
 
 By comparing the TVDs found through permutation testing to the observed TVD, we found the resulting p-value was 1. Since our p-value is greater than the significance level of 0.05, we fail to reject the null, and therefore it seems that the missingness in `killsat15` is *not* dependent on `position`
 
@@ -158,19 +159,19 @@ We did three separate hypothesis tests for the three impact variables: KDA, dama
 - P-value: 0.0
 - Conclusion: since the p-value is less than the significance level of 0.05, we reject the null hypothesis. All roles do not have the same average KDA z-score.
 
-<p style="text-align:center"><iframe src="assets/hypo-test-kda.html" width=800 height=425 frameBorder=0></iframe></p>
+<p style="text-align:center"><iframe src="assets/hypo-test-kda.html" width=800 height=425 align='center' frameBorder=0></iframe></p>
 
 **Results for Damage to Champions:**
 - P-value: 0.0
 - Conclusion: since the p-value is less than the significance level of 0.05, we reject the null hypothesis. All roles do not have the same average damage to champions z-score.
 
-<p style="text-align:center"><iframe src="assets/hypo-test-dmg.html" width=800 height=425 frameBorder=0></iframe></p>
+<p style="text-align:center"><iframe src="assets/hypo-test-dmg.html" width=800 height=425 align='center' frameBorder=0></iframe></p>
 
 **Results for Total Gold:**
 - P-value: 0.0
 - Conclusion: since the p-value is less than the significance level of 0.05, we reject the null hypothesis. All roles do not have the same average total gold z-score.
 
-<p style="text-align:center"><iframe src="assets/hypo-test-gold.html" width=800 height=425 frameBorder=0></iframe></p>
+<p style="text-align:center"><iframe src="assets/hypo-test-gold.html" width=800 height=425 align='center' frameBorder=0></iframe></p>
 
 Therefore, we reject the null hypothesis—all roles do not have the same impact overall. Since we know that all roles do not have the same impact overall, we shifted our focus to only look at one variable (damage to champions). We chose to use damage because we believe that the KDA statistic may not be a good statistic to use to compare as seen under [Interesting Aggregates](#interesting-aggregates). For example, a player could be focused on by the opposing team because they were being impactful. As a result, this would lower their KDA since that player could have a lot of deaths. We also did not use total gold because the gold obtained by players is used to buy items to deal more damage to the opposing team. Hence, we selected `damagetochampions` as the variable to use. 
 
@@ -185,4 +186,4 @@ We used the difference in mean as our test statistic because we are comparing qu
 - P-value: 0.0
 - Conclusion: since the p-value is less than the significance level of 0.05, we reject the null hypothesis. Bottom and middle do not have the same average z-score for damage to champions. 
 
-<p style="text-align:center"><iframe src="assets/hypo-test-dtc-diff.html" width=800 height=425 frameBorder=0></iframe></p>
+<p style="text-align:center"><iframe src="assets/hypo-test-dtc-diff.html" width=800 height=425 align='center' frameBorder=0></iframe></p>
