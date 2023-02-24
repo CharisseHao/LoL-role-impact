@@ -79,7 +79,7 @@ For our univariate analysis, we decided to focus on investigating the distributi
 </p>
 </p>
 
-In the bar graphs provided above, each graph corresponds to a different role or position, with each bar on the x-axis representing a different statistic while the y-axis indicates the average z-score. Upon taking a closer look at these graphs, the first thing we noticed was that roles such as middle and bottom had positive average z-scores for all statistics while top had a combination of positive and negative and roles such as support and jungle had average z-scores around or below zero. Based on this observation, the data seemed to indicate middle and bottom roles have more impact in games overall than top, support, and jungle. 
+In the bar graphs provided above, each graph corresponds to a different role or position, with each bar on the x-axis representing a different statistic while the y-axis indicates the average z-score. Upon taking a closer look at these graphs, the first thing we noticed was that roles such as middle and bottom had positive average z-scores for all statistics while top had a combination of positive and negative and roles such as support and jungle had average z-scores around or below zero. Based on this observation, the data seems to indicate middle and bottom roles have more impact in games overall than top, support, and jungle. 
 
 
 ### Bivariate Analysis
