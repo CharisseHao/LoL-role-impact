@@ -70,12 +70,12 @@ To standardize the statistics accordingly based on each game, we grouped by `gam
 For our univariate analysis, we decided to focus on investigating the distribution of each statistic’s z-scores depending on the position column. In order to generate these plots, we grouped by position before calculating the average z-score for each statistic we were investigating. These included: KDA, total gold, total creep score, and damage to champions. 
 
 <p float = 'left'> 
-    <iframe src="assets/univariate-plots/uni-fig-mid.html" width=410 height=100% frameBorder=0></iframe>
-    <iframe src="assets/univariate-plots/uni-fig-bot.html" width=410 height=100% frameBorder=0></iframe> 
+    <iframe src="assets/univariate-plots/uni-fig-mid.html" width=410 height='100%' frameBorder=0></iframe>
+    <iframe src="assets/univariate-plots/uni-fig-bot.html" width=410 height='100%' frameBorder=0></iframe> 
 <p float = 'left'> 
-    <iframe src="assets/univariate-plots/uni-fig-top.html" width=410 height=100% frameBorder=0></iframe>
-    <iframe src="assets/univariate-plots/uni-fig-sup.html" width=410 height=100% frameBorder=0></iframe> 
-<p style="text-align:center"><iframe src="assets/univariate-plots/uni-fig-jng.html" width=410 height=100% align='center' frameBorder=0></iframe></p>
+    <iframe src="assets/univariate-plots/uni-fig-top.html" width=410 height='100%' frameBorder=0></iframe>
+    <iframe src="assets/univariate-plots/uni-fig-sup.html" width=410 height='100%' frameBorder=0></iframe> 
+<p style="text-align:center"><iframe src="assets/univariate-plots/uni-fig-jng.html" width=410 height='100%' align='center' frameBorder=0></iframe></p>
 </p>
 </p>
 
