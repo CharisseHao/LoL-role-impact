@@ -93,7 +93,7 @@ The following box plots illustrate each position’s distribution of z-scores fo
 
 <p style="text-align:center"><iframe src="assets/bivariate-plot-kda.html" width='100%' height=435 align='center' frameBorder=0></iframe></p>
 
-Taking a closer look at this plot, we find that all positions seem to have relatively the same spread in z-scores, with the median ranging from around -0.1 to -0.5. The boxplot for top seems to be slightly lower compared to the others, and top and support are the only roles containing outliers. We also notice that the variance for top is comparably lower than the rest of the positions. This shows more consistency in KDA for top players, which suggests a less explosive playstyle for top. Once again, we notice the roles of middle and bottom have higher z-scores, as their box plots are higher than the other positions’.
+Taking a closer look at this plot, we found that all positions seem to have relatively the same spread in z-scores, with the median ranging from around -0.1 to -0.5. The boxplot for top seems to be slightly lower compared to the others, and top and support are the only roles containing outliers. We also noticed that the variance for top is comparably lower than the rest of the positions. This shows more consistency in KDA for top players, which suggests a less explosive playstyle for top. Once again, we noticed the roles of middle and bottom have higher z-scores, as their box plots are higher than the other positions’.
 
 <p style="text-align:center"><iframe src="assets/bivariate-plot-dc.html" width='100%' height=435 align='center' frameBorder=0></iframe></p>
 
@@ -122,21 +122,21 @@ We believe that the column `ban5` in our dataset is not missing at random (NMAR)
 When we first began exploring this dataset, we were interested in overall data and data collected at the 15 minute mark. We noticed many of the columns corresponding to data collected at this time mark have missing values, so we decided to investigate the missingness dependency of the column `killsat15`.
 
 The first column we tested missingness against was the column `datacompleteness`.
-Null Hypothesis: Distribution of `'datacompleteness'` when `'killsat15'` is missing is the same as the distribution of `'datacompleteness'` when `'killsat15'` is not missing
-Alternative Hypothesis: Distribution of `'datacompleteness'` when `'killsat15'` is missing is *not* the same as the distribution of `'datacompleteness'` when `'killsat15'` is not missing
-Included below is the graph portraying the distribution of `datacompleteness` when `killsat15` is and is not missing.
+Null Hypothesis: Distribution of `'datacompleteness'` when `'killsat15'` is missing is the same as the distribution of `'datacompleteness'` when `'killsat15'` is not missing.
+Alternative Hypothesis: Distribution of `'datacompleteness'` when `'killsat15'` is missing is *not* the same as the distribution of `'datacompleteness'` when `'killsat15'` is not missing.
+Below is the graph portraying the distribution of `datacompleteness` when `killsat15` is and is not missing.
 
 <p style="text-align:center"><iframe src="assets/missingness-plots/miss-data-completeness.html" width=600 height=375 align='center' frameBorder=0></iframe></p>
 
-We performed a permutation test to determine whether or not the missingness of `killsat15` was dependent on `datacompleteness` using total variation distance (TVD) as our test statistic. Below is the plot which illustrates the empirical distribution of the TVDs, with our observed TVD marked as a red vertical line.  
+We performed a permutation test to determine whether or not the missingness of `killsat15` was dependent on `datacompleteness` using total variation distance (TVD) as our test statistic. Below is the plot illustrating the empirical distribution of the TVDs, with our observed TVD marked as a red vertical line.  
 
 <p style="text-align:center"><iframe src="assets/missingness-plots/fig-empirical-dc.html" width='100%' height=425 align='center' frameBorder=0></iframe></p>
 
 From here, we calculated the p-value by comparing the observed TVD to the TVDs found through permutation testing, and the resulting p-value was 0. Since our p-value is less than the significance level of 0.05, we reject the null hypothesis, and therefore it seems that missingness in `killsat15` is dependent on `datacompleteness`.
 
 The second column we tested missingness against was the column `position`. 
-Null Hypothesis: Distribution of `'position'` when `'killsat15'` is missing is the same as the distribution of `'position'` when `'killsat15'` is not missing
-Alternative Hypothesis: Distribution of `'position'` when `'killsat15'` is missing is *not* the same as the distribution of `'position'` when `'killsat15'` is not missing
+Null Hypothesis: Distribution of `'position'` when `'killsat15'` is missing is the same as the distribution of `'position'` when `'killsat15'` is not missing.
+Alternative Hypothesis: Distribution of `'position'` when `'killsat15'` is missing is *not* the same as the distribution of `'position'` when `'killsat15'` is not missing.
 Following the same steps as above, we plotted the distribution of `position` when `killsat15` is and is not missing. Then, we carried out a permutation test using TVD as the test statistic again.
 
 <p style="text-align:center"><iframe src="assets/missingness-plots/miss-position.html" width=600 height=375 align='center' frameBorder=0></iframe></p>
@@ -146,36 +146,40 @@ By comparing the TVDs found through permutation testing to the observed TVD, we 
 
 ## Hypothesis Testing
 
-After doing our exploratory data analysis, we chose to answer the general question: do all roles have the same impact overall? Our null hypothesis is all roles have the same impact overall. Our alternative hypothesis is all roles do not have the same impact overall.
-- Test statistic: total variation distance (TVD)
+After conducting our exploratory data analysis, we chose to answer the general question: do all roles have the same impact overall? 
+Null hypothesis: All roles have the same impact overall. 
+Alternative hypothesis: All roles do not have the same impact overall.
+- Test statistic: Total variation distance (TVD)
 - Significance level: 5% (0.05)
 - Impact variables: KDA, damage to champions, total gold
 
-We used the total variation distance for this test because we are comparing the difference between the different positions (top, jng, mid, bot, sup), which are categorical distributions. We chose the most commonly used significance level because a p-value less than 0.05 is statistically significant. It indicates strong evidence against the null hypothesis since there is less than a 5% probability that the null hypothesis is correct. We decided to not use `total cs` for our hypothesis test because total cs correlates with the total gold a player has.
+We used the total variation distance (TVD) for this test because we are comparing the difference between the different positions (top, jng, mid, bot, sup), which are categorical distributions. We chose the most commonly used significance level because a p-value less than 0.05 is statistically significant. It indicates strong evidence against the null hypothesis since there is less than a 5% probability that the null hypothesis is correct. 
 
-We did three separate hypothesis tests for the three impact variables: KDA, damage to champions, and total gold. 
+We decided to not use `total cs` for our hypothesis test because total cs correlates with the total gold a player has. We did three separate hypothesis tests for the three impact variables: KDA, damage to champions, and total gold. 
 
 **Results for KDA:** 
 - P-value: 0.0
-- Conclusion: since the p-value is less than the significance level of 0.05, we reject the null hypothesis. All roles do not have the same average KDA z-score.
+- Conclusion: Since the p-value is less than the significance level of 0.05, we reject the null hypothesis. All roles do not have the same average KDA z-score.
 
 <p style="text-align:center"><iframe src="assets/hypo-test-kda.html" width=800 height=425 align='center' frameBorder=0></iframe></p>
 
 **Results for Damage to Champions:**
 - P-value: 0.0
-- Conclusion: since the p-value is less than the significance level of 0.05, we reject the null hypothesis. All roles do not have the same average damage to champions z-score.
+- Conclusion: Since the p-value is less than the significance level of 0.05, we reject the null hypothesis. All roles do not have the same average damage to champions z-score.
 
 <p style="text-align:center"><iframe src="assets/hypo-test-dmg.html" width=800 height=425 align='center' frameBorder=0></iframe></p>
 
 **Results for Total Gold:**
 - P-value: 0.0
-- Conclusion: since the p-value is less than the significance level of 0.05, we reject the null hypothesis. All roles do not have the same average total gold z-score.
+- Conclusion: Since the p-value is less than the significance level of 0.05, we reject the null hypothesis. All roles do not have the same average total gold z-score.
 
 <p style="text-align:center"><iframe src="assets/hypo-test-gold.html" width=800 height=425 align='center' frameBorder=0></iframe></p>
 
 Therefore, we reject the null hypothesis—all roles do not have the same impact overall. Since we know that all roles do not have the same impact overall, we shifted our focus to only look at one variable (damage to champions). We chose to use damage because we believe that the KDA statistic may not be a good statistic to use to compare as seen under [Interesting Aggregates](#interesting-aggregates). For example, a player could be focused on by the opposing team because they were being impactful. As a result, this would lower their KDA since that player could have a lot of deaths. We also did not use total gold because the gold obtained by players is used to buy items to deal more damage to the opposing team. Hence, we selected `damagetochampions` as the variable to use. 
 
-Looking at the box plot titled: *Avg Stat Z-score for All Positions* under [Bivariate Analysis](#bivariate-analysis), we notice that middle and bottom are the only positions that have positive z-scores for all variables (KDA, total gold, total cs, damage to champions). We then asked a follow-up question: which role has more impact overall for damage to champions—bottom or middle? We conducted a one-tailed hypothesis test. Our new null hypothesis is bottom and middle have the same average z-score for damage to champions. Our new alternative hypothesis is bottom has a higher average z-score for damage to champions than middle. 
+Looking at the box plot titled: *Avg Stat Z-score for All Positions* under [Bivariate Analysis](#bivariate-analysis), we notice that middle and bottom are the only positions that have positive z-scores for all variables (KDA, total gold, total cs, damage to champions). We then asked a follow-up question: which role has more impact overall for damage to champions—bottom or middle? We conducted a one-tailed hypothesis test. 
+Null hypothesis: Bottom and middle have the same average z-score for damage to champions. 
+Alternative hypothesis: Bottom has a higher average z-score for damage to champions than middle. 
 - Test statistic: Difference in Mean
 - Significance Level: 5% (0.05)
 - Impact variable: damage to champions
@@ -184,6 +188,6 @@ We used the difference in mean as our test statistic because we are comparing qu
 
 **Results:**
 - P-value: 0.0
-- Conclusion: since the p-value is less than the significance level of 0.05, we reject the null hypothesis. Bottom and middle do not have the same average z-score for damage to champions. 
+- Conclusion: Since the p-value is less than the significance level of 0.05, we reject the null hypothesis. Bottom and middle do not have the same average z-score for damage to champions. 
 
 <p style="text-align:center"><iframe src="assets/hypo-test-dtc-diff.html" width=800 height=425 align='center' frameBorder=0></iframe></p>
