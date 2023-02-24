@@ -121,7 +121,7 @@ We believe that the column `ban5` in our dataset is not missing at random (NMAR)
 
 ### Missingness Dependency
 
-<iframe src="assets/missingness-plots/miss-data-completeness.html" width=800 height=400 align=center frameBorder=0></iframe>
+<iframe src="assets/missingness-plots/miss-data-completeness.html" width=800 height=400 align="center" frameBorder=0></iframe>
 <iframe src="assets/missingness-plots/fig-empirical-dc.html" width=800 height=400 frameBorder=0></iframe>
 <p align="center"><iframe src="assets/missingness-plots/miss-position.html" width=800 height=400 frameBorder=0></iframe></p>
 <iframe src="assets/missingness-plots/fig-empirical-position.html" width=800 height=400 frameBorder=0></iframe>
