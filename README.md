@@ -57,7 +57,7 @@ The dataset has a total of 149,232 rows and 123 columns. We cleaned the dataset 
 ## Cleaning and EDA (Exploratory Data Analysis) 
 
 ### Data Cleaning
-The first step of our data cleaning process was to check for missingness in our dataset. We found that the column `damagetochampions` had missing values when the value for `datacompleteness` was 'partial'. We then dropped the rows where `datacompleteness` is 'partial', which got rid of all missing values in our dataset.
+The first step of our data cleaning process was to check for missingness in our dataset. We found that the column `damagetochampions` has missing values when the value for `datacompleteness` was 'partial'. We then dropped the rows where `datacompleteness` is 'partial', which got rid of all missing values in our dataset.
 
 The second step of our data cleaning process was to standardize our statistics in the dataset. We transformed all our data to z-scores for each game. We did this by creating a helper function that calculates the z-score using the z-score formula: Z = (X-µ) / σ
 
@@ -79,7 +79,7 @@ For our univariate analysis, we decided to focus on investigating the distributi
 </p>
 </p>
 
-In the bar graphs provided above, each graph corresponds to a different role, with each bar on the x-axis representing a different statistic while the y-axis indicates the average z-score. Upon taking a closer look at these graphs, the first thing we noticed was that roles such as middle and bottom had positive average z-scores for all statistics while top had a combination of positive and negative and roles such as support and jungle had average z-scores around or below zero. Based on this observation, the data seems to indicate middle and bottom roles have more impact in games overall than top, support, and jungle. 
+In the bar graphs provided above, each graph corresponds to a different role, with each bar on the x-axis representing a different statistic while the y-axis indicates the average z-score. Upon taking a closer look at these graphs, the first thing we noticed was that roles such as middle and bottom have positive average z-scores for all statistics while top has a combination of positive and negative and roles such as support and jungle have average z-scores around or below zero. Based on this observation, the data seems to indicate middle and bottom roles have more impact in games overall than top, support, and jungle. 
 
 
 ### Bivariate Analysis
@@ -119,7 +119,7 @@ We believe that the column `ban5` in our dataset is not missing at random (NMAR)
 
 
 ### Missingness Dependency
-When we first began exploring this dataset, we were interested in overall data and data collected at the 15 minute mark. We noticed many of the columns corresponding to data collected at this time mark had missing values, so we decided to investigate the missingness dependency of the column `killsat15`.
+When we first began exploring this dataset, we were interested in overall data and data collected at the 15 minute mark. We noticed many of the columns corresponding to data collected at this time mark have missing values, so we decided to investigate the missingness dependency of the column `killsat15`.
 
 The first column we tested missingness against was the column `datacompleteness`.
 Null Hypothesis: Distribution of `'datacompleteness'` when `'killsat15'` is missing is the same as the distribution of `'datacompleteness'` when `'killsat15'` is not missing
