@@ -1,5 +1,5 @@
 
-# Role Impact Analysis (League of Legends)
+# Dominating the Rift: Uncovering the Most Impactful Position in League of Legends
 Data analysis on the impact of different roles from League of Legends for a DSC80 project at UCSD. 
 Contributors: Charisse Hao and Nicole Zhang
 
