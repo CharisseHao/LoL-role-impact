@@ -102,7 +102,9 @@ Unlike the previous boxplot, there is a lot more variance in the distribution of
 
 
 ### Interesting Aggregates
+<iframe src="assets/int-agg-plots/int-fig-kda.html" width=800 height=400 frameBorder=0></iframe>
 
+<iframe src="assets/int-agg-plots/int-fig-dc.html" width=800 height=400 frameBorder=0></iframe>
 
 
 ## Assessment of Missingness
