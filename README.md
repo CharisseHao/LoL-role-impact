@@ -29,7 +29,7 @@ League of Legends is a competitive game, so it is natural for players to want to
 The dataset we used to conduct this analysis is the [2022 League of Legends Esports Stats dataset](https://drive.google.com/file/d/1EHmptHyzY8owv0BAcNKtkQpMwfkURwRy/view?usp=sharing) provided by Oracle's Elixir, a website that provides advanced statistics and analysis tools for the game. This dataset contains a comprehensive collection of data from professional League of Legends matches, including detailed information on player and team performance, game events, and match outcomes. The dataset contains information on thousands of matches, covering various tournaments and competitions.
 
 ### Dataset Statistics and Definitions:
-The dataset has a total of 149,232 rows and 123 columns. We cleaned the dataset to only use the data we needed for our analysis, so our dataframe consisted of 124,360 rows and 9 columns. Below are the definitions of the columns we used from this dataset.
+The dataset has a total of 149,232 rows and 123 columns. We cleaned the dataset to only include the data we needed for our analysis, so our dataframe consisted of 124,360 rows and 9 columns. Below are the definitions of the columns we used from this dataset.
 
 | **Column Name**     | **Definition**                                               |
 | ------------------- | ------------------------------------------------------------ |
@@ -43,7 +43,7 @@ The dataset has a total of 149,232 rows and 123 columns. We cleaned the dataset 
 | `totalgold`         | total gold per player                                        |
 | `total cs`          | total creep score per player                                 |
 
-\* Note: we will be using the words "role" and "position" interchangeably. 
+\* Note: we will be using the terms "role" and "position" interchangeably. 
 
 | **Positions Abbreviation** | **Meaning** |
 | -------------------------- | ----------- |
@@ -57,7 +57,7 @@ The dataset has a total of 149,232 rows and 123 columns. We cleaned the dataset 
 ## Cleaning and EDA (Exploratory Data Analysis) 
 
 ### Data Cleaning
-The first step of our data cleaning process was to check for missingness in our dataset. We found that the column `damagetochampions` has missing values when the value for `datacompleteness` was 'partial'. We then dropped the rows where `datacompleteness` is 'partial', which got rid of all missing values in our dataset.
+The first step of our data cleaning process was to check for missingness in our dataset. We found that the column `damagetochampions` had missing values when the value for `datacompleteness` was "partial". After dropping the rows which contained "partial" `datacompleteness`, there were no more missing values in our dataset.
 
 The second step of our data cleaning process was to calculate and add the `KDA` column to our dataset. We calculated each player's KDA by using the formula `KDA` = (`kills` + `assists`) / `deaths`. However, some of our `KDA` values were `inf` (infinity). This was because some players had 0 deaths, so dividing by 0 caused the `KDA` value to be `inf`. We solved this issue by filling `KDA` values that were `inf` using an adjusted formula `KDA` = `kills` + `assists`.
 
