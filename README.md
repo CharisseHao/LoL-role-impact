@@ -59,7 +59,7 @@ The dataset has a total of 149,232 rows and 123 columns. We cleaned the dataset 
 ### Data Cleaning
 The first step of our data cleaning process was to check for missingness in our dataset. We found that the column `damagetochampions` has missing values when the value for `datacompleteness` was 'partial'. We then dropped the rows where `datacompleteness` is 'partial', which got rid of all missing values in our dataset.
 
-The second step of our data cleaning process was to calculate and add the `KDA` column. We calculated each player's KDA by using the formula `KDA` = (`kills` + `assists`) / `deaths`. However, some of our `KDA` values were `inf`. This was because some players had 0 deaths, so dividing by 0 caused the `KDA` value to be `inf`. We solved this by filling `KDA` that are `inf` by using an adjusted formula `KDA` = `kills` + `assists`.
+The second step of our data cleaning process was to calculate and add the `KDA` column to our dataset. We calculated each player's KDA by using the formula `KDA` = (`kills` + `assists`) / `deaths`. However, some of our `KDA` values were `inf` (infinity). This was because some players had 0 deaths, so dividing by 0 caused the `KDA` value to be `inf`. We solved this issue by filling `KDA` values that were `inf` using an adjusted formula `KDA` = `kills` + `assists`.
 
 The third step of our data cleaning process was to standardize our statistics in the dataset. We transformed all our data to z-scores for each game. We did this by creating a helper function that calculates the z-score using the z-score formula: Z = (X-µ) / σ
 
