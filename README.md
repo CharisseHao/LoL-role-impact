@@ -74,7 +74,7 @@ For our univariate analysis, we decided to focus on investigating the distributi
 <p float = 'left'> 
     <iframe src="assets/univariate-plots/uni-fig-top.html" width=410 height=300 frameBorder=0></iframe>
     <iframe src="assets/univariate-plots/uni-fig-sup.html" width=410 height=300 frameBorder=0></iframe> 
-<iframe src="assets/univariate-plots/uni-fig-jng.html" width=410 height=300 align='center' frameBorder=0></iframe>
+<p style="text-align:center"><iframe src="assets/univariate-plots/uni-fig-jng.html" width=410 height=300 align='center' frameBorder=0></iframe></p>
 </p>
 </p>
 
