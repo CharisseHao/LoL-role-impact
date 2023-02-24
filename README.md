@@ -99,7 +99,7 @@ Taking a closer look at this plot, we found that all positions seem to have rela
 Unlike the previous boxplot, there is a lot more variance in the distribution of z-scores across each role. Top, middle, and bottom all seem to have similarly wide ranges, while jungle and support have much smaller ranges. Furthermore, jungle and support have the lowest medians at -0.55 and -1.23 respectively, and they also have the most outlying data points. On the other hand, middle and bottom continue to have the highest medians, which further implies that these two roles may be the most impactful overall. 
 
 ### Interesting Aggregates
-To further explore the distribution of z-scores and the pattern we noticed of middle and top consistently having higher z-scores, we decided to plot all positions’ z-scores for KDA and total damage to champions in an overlaid histogram. For the following plots, the x-axis represents the z-score, the y-axis represents the number of players that fall within each z-score bin, and each color corresponds to a certain role based on the legend - blue is top, red is jungle, green is middle, purple is bottom, and support is orange. 
+To further explore the distribution of z-scores and the pattern we noticed of middle and top consistently having higher z-scores, we decided to plot all positions’ z-scores for KDA and total damage to champions in an overlaid histogram. For the following plots, the x-axis represents the z-score, the y-axis represents the number of players that fall within each z-score bin, and each color corresponds to a certain role based on the legend-blue is top, red is jungle, green is middle, purple is bottom, and support is orange. 
 
 <p style="text-align:center"><iframe src="assets/int-agg-plots/int-fig-kda.html" width='100%' height=375 align='center' frameBorder=0></iframe></p>
 
@@ -107,7 +107,7 @@ This overlaid histogram seems to indicate that all roles have a similar spread i
 
 <p style="text-align:center"><iframe src="assets/int-agg-plots/int-fig-dc.html" width='100%' height=375 align='center' frameBorder=0></iframe></p>
 
-Unlike the preceding overlaid histogram, this plot supports the observation made in previous sections - support generally has the lowest z-scores while middle, bottom, and top have the highest z-scores. 
+Unlike the preceding overlaid histogram, this plot supports the observation made in previous sections-support generally has the lowest z-scores while middle, bottom, and top have the highest z-scores. 
 
 
 ## Assessment of Missingness
