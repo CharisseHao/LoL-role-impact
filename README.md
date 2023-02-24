@@ -63,7 +63,7 @@ The second step of our data cleaning process was to calculate and add the `KDA` 
 
 The third step of our data cleaning process was to standardize our statistics in the dataset. We transformed all our data to z-scores for each game. We did this by creating a helper function that calculates the z-score using the z-score formula: 
 $$
-Z = \frac{(X - µ)}{σ}\dx
+\Z = \frac{(X - µ)}{σ}\dx
 $$
 
 To standardize the statistics accordingly based on each game, we grouped by `gameid` before applying `.transform(z-score)`. The first five rows of our dataframe are included below:
