@@ -66,8 +66,6 @@ The third step of our data cleaning process was to standardize our statistics in
 To standardize the statistics accordingly based on each game, we grouped by `gameid` before applying `.transform(z-score)`. The first five rows of our dataframe are included below:
 <table border="1" class="dataframe" width='100%'> <thead>    <tr style="text-align: right;">      <th></th>      <th>gameid</th>      <th>datacompleteness</th>      <th>position</th>      <th>damagetochampions</th>      <th>totalgold</th>      <th>total cs</th>      <th>KDA</th>    </tr>  </thead>  <tbody>    <tr>      <th>0</th>      <td>ESPORTSTMNT01_2690210</td>      <td>complete</td>      <td>top</td>      <td>0.319151</td>      <td>0.470574</td>      <td>0.587278</td>      <td>-0.947893</td>    </tr>    <tr>      <th>1</th>      <td>ESPORTSTMNT01_2690210</td>      <td>complete</td>      <td>jng</td>      <td>-0.283245</td>      <td>-0.404958</td>      <td>-0.399444</td>      <td>-0.892339</td>    </tr>    <tr>      <th>2</th>      <td>ESPORTSTMNT01_2690210</td>      <td>complete</td>      <td>mid</td>      <td>0.091917</td>      <td>-0.123676</td>      <td>0.135526</td>      <td>-0.704843</td>    </tr>    <tr>      <th>3</th>      <td>ESPORTSTMNT01_2690210</td>      <td>complete</td>      <td>bot</td>      <td>-0.382416</td>      <td>0.310190</td>      <td>0.527837</td>      <td>-1.017335</td>    </tr>    <tr>      <th>4</th>      <td>ESPORTSTMNT01_2690210</td>      <td>complete</td>      <td>sup</td>      <td>-1.502484</td>      <td>-1.604184</td>      <td>-1.659597</td>      <td>-0.934004</td>    </tr>  </tbody></table>
 
-
-
 ### Univariate Analysis
 For our univariate analysis, we decided to focus on investigating the distribution of each statistic’s z-scores depending on the `position` column. In order to generate these plots, we grouped by `position` before calculating the average z-score for each statistic we were investigating. These included: KDA, total gold, total creep score, and damage to champions. 
 
@@ -82,7 +80,6 @@ For our univariate analysis, we decided to focus on investigating the distributi
 </p>
 
 In the bar graphs provided above, each graph corresponds to a different role, with each bar on the x-axis representing a different statistic while the y-axis indicates the average z-score. Upon taking a closer look at these graphs, the first thing we noticed was that roles such as middle and bottom have positive average z-scores for all statistics, while top has a combination of positive and negative, and roles such as support and jungle have average z-scores around or below zero. Based on this observation, the data seems to indicate middle and bottom roles have more impact in games overall than top, support, and jungle. 
-
 
 ### Bivariate Analysis
 In this section, we wanted to continue comparing the statistics’ z-scores across all positions. We combined all positions’ average z-scores into one bar graph to make comparisons easier, as well as creating box plots to perform further analysis on the distribution of z-scores for each statistic. 
@@ -101,7 +98,6 @@ Taking a closer look at this plot, we found that all positions seem to have rela
 
 Unlike the previous boxplot, there is a lot more variance in the distribution of z-scores across each role. Top, middle, and bottom all seem to have similarly wide ranges, while jungle and support have much smaller ranges. Furthermore, jungle and support have the lowest medians at -0.55 and -1.23 respectively, and they also have the most outlying data points. On the other hand, middle and bottom continue to have the highest medians, which further implies that these two roles may be the most impactful overall. 
 
-
 ### Interesting Aggregates
 To further explore the distribution of z-scores and the pattern we noticed of middle and top consistently having higher z-scores, we decided to plot all positions’ z-scores for KDA and total damage to champions in an overlaid histogram. For the following plots, the x-axis represents the z-score, the y-axis represents the number of players that fall within each z-score bin, and each color corresponds to a certain role based on the legend - blue is top, red is jungle, green is middle, purple is bottom, and support is orange. 
 
@@ -119,14 +115,12 @@ Unlike the preceding overlaid histogram, this plot supports the observation made
 ### NMAR Analysis
 We believe that the column `ban5` in our dataset is not missing at random (NMAR). Values are missing in this column with no apparent pattern, leading us to consider circumstances where some teams may have either forgotten to ban or did not see the need to ban a fifth champion. This would make the missing data points dependent on the actual value of the missing data point itself, causing the missingness to be NMAR. To make this column missing at random (MAR), we can collect more data on whether or not the total 5 bans for each team were complete and name the new column `bancompleteness`. With this new column, the `ban5` column will no longer be dependent on the actual value itself, but will instead depend on `bancompleteness`. 
 
-
 ### Missingness Dependency
 When we first began exploring this dataset, we were interested in overall data and data collected at the 15 minute mark. We noticed many of the columns corresponding to data collected at this time mark have missing values, so we decided to investigate the missingness dependency of the column `killsat15`.
 
 The first column we tested missingness against was the column `datacompleteness`.
 
 Null Hypothesis: Distribution of `'datacompleteness'` when `'killsat15'` is missing is the same as the distribution of `'datacompleteness'` when `'killsat15'` is not missing.
-
 Alternative Hypothesis: Distribution of `'datacompleteness'` when `'killsat15'` is missing is *not* the same as the distribution of `'datacompleteness'` when `'killsat15'` is not missing.
 
 Below is the graph portraying the distribution of `datacompleteness` when `killsat15` is and is not missing.
@@ -142,7 +136,6 @@ From here, we calculated the p-value by comparing the observed TVD to the TVDs f
 The second column we tested missingness against was the column `position`. 
 
 Null Hypothesis: Distribution of `'position'` when `'killsat15'` is missing is the same as the distribution of `'position'` when `'killsat15'` is not missing.
-
 Alternative Hypothesis: Distribution of `'position'` when `'killsat15'` is missing is *not* the same as the distribution of `'position'` when `'killsat15'` is not missing.
 
 Following the same steps as above, we plotted the distribution of `position` when `killsat15` is and is not missing. Then, we carried out a permutation test using TVD as the test statistic again.
@@ -152,8 +145,8 @@ Following the same steps as above, we plotted the distribution of `position` whe
 
 By comparing the TVDs found through permutation testing to the observed TVD, we found the resulting p-value was 1. Since our p-value is greater than the significance level of 0.05, we fail to reject the null, and therefore it seems that the missingness in `killsat15` is *not* dependent on `position`.
 
-## Hypothesis Testing
 
+## Hypothesis Testing
 After conducting our exploratory data analysis, we chose to answer the general question: do all roles have the same impact overall? 
 
 Null hypothesis: All roles have the same impact overall. 
