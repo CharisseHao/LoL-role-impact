@@ -86,17 +86,17 @@ In the bar graphs provided above, each graph corresponds to a different role or 
 ### Bivariate Analysis
 In this section, we wanted to continue comparing the statistics’ z-scores across all positions. We combined all positions’ average z-scores into one bar graph to make comparisons easier, as well as creating box plots to perform further analysis on the distribution of z-scores for each statistic. 
 
-<iframe src="assets/bivariate-plot-all.html" width=800 height=425 frameBorder=0></iframe>
+<iframe src="assets/bivariate-plot-all.html" width=800 height=435 frameBorder=0></iframe>
 
 The graph above contains each positions’ average z-score across all statistics. Along the x-axis, it specifies which position the bars belong to, and the y-axis once again indicates the average z-score. The bins for each position are color coded based on the legend, with blue corresponding to KDA, red to total gold, green to total creep score, and purple to damage to champions. By plotting all positions side-by-side, we were able to deduce that bottom has the overall highest average z-scores for all statistics, while support has the lowest average z-score for all statistics besides KDA. 
 
 The following box plots illustrate each position’s distribution of z-scores for KDA and damage to champions respectively. The x-axis specifies which position the box plot corresponds to and the y-axis represents the z-score. 
 
-<iframe src="assets/bivariate-plot-kda.html" width=800 height=425 frameBorder=0></iframe>
+<iframe src="assets/bivariate-plot-kda.html" width=800 height=435 frameBorder=0></iframe>
 
 Taking a closer look at this plot, we find that all positions seem to have relatively the same spread in z-scores, with the median ranging from around -0.1 to -0.5. The boxplot for top seems to be slightly lower compared to the others, and top and support are the only roles containing outliers. Once again, we notice the roles of middle and bottom have higher z-scores, as their box plots are higher than the other positions’.
 
-<iframe src="assets/bivariate-plot-dc.html" width=800 height=425 frameBorder=0></iframe>
+<iframe src="assets/bivariate-plot-dc.html" width=800 height=435 frameBorder=0></iframe>
 
 Unlike the previous boxplot, there is a lot more variance in the distribution of z-scores across each role. Top, middle, and bottom all seem to have similarly wide ranges, while jungle and support have much smaller ranges. Furthermore, jungle and support have the lowest medians at -0.55 and -1.23 respectively, and they also have the most outlying data points. On the other hand, middle and bottom continue to have the highest medians, which further implies that these two roles may be the most impactful overall. 
 
