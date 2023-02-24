@@ -92,7 +92,7 @@ The following box plots illustrate each position’s distribution of z-scores fo
 
 <iframe src="assets/bivariate-plot-kda.html" width=800 height=435 frameBorder=0></iframe>
 
-Taking a closer look at this plot, we find that all positions seem to have relatively the same spread in z-scores, with the median ranging from around -0.1 to -0.5. The boxplot for top seems to be slightly lower compared to the others, and top and support are the only roles containing outliers. Once again, we notice the roles of middle and bottom have higher z-scores, as their box plots are higher than the other positions’.
+Taking a closer look at this plot, we find that all positions seem to have relatively the same spread in z-scores, with the median ranging from around -0.1 to -0.5. The boxplot for top seems to be slightly lower compared to the others, and top and support are the only roles containing outliers. We also notice that the variance for top is comparably lower than the rest of the positions. This shows more consistency in KDA for top players, which suggests a less explosive playstyle for top. Once again, we notice the roles of middle and bottom have higher z-scores, as their box plots are higher than the other positions’.
 
 <iframe src="assets/bivariate-plot-dc.html" width=800 height=435 frameBorder=0></iframe>
 
