@@ -160,6 +160,7 @@ Looking at the box plot titled: *Distribution of Damage to Champions Z-scores pe
 - Impact variable: damage to champions
 
 We used the difference in mean as our test statistic because we are comparing quantitative distributions and the mean is not the same for the two distributions. We used the same significance level as stated above. 
+
 **Results:**
 - P-value: 0.0
 - Conclusion: since the p-value is less than the significance level of 0.05, we reject the null hypothesis. Bottom and middle do not have the same average z-score for damage to champions. 
