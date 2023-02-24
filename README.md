@@ -149,42 +149,42 @@ By comparing the TVDs found through permutation testing to the observed TVD, we 
 ## Hypothesis Testing
 After conducting our exploratory data analysis, we chose to answer the general question: do all roles have the same impact overall? 
 
-Null hypothesis: All roles have the same impact overall. 
+**Null hypothesis:** All roles have the same impact overall. 
 
-Alternative hypothesis: All roles do not have the same impact overall.
+**Alternative hypothesis:** All roles do *not* have the same impact overall.
 - Test statistic: Total Variation Distance (TVD)
 - Significance level: 5% (0.05)
 - Impact variables: KDA, Damage to Champions, Total Gold
 
-We used the total variation distance (TVD) for this test because we are comparing the difference between the different positions (top, jng, mid, bot, sup), which are categorical distributions. We chose the most commonly used significance level because a p-value less than 0.05 is statistically significant. It indicates strong evidence against the null hypothesis since there is less than a 5% probability that the null hypothesis is correct. 
+We used the total variation distance (TVD) as our test statistic for this test because we are comparing the difference between different positions (top, jungle, middle, bottom, and support), which are categorical distributions. We chose the most commonly used significance level, as a p-value less than 0.05 is considered statistically significant. By using this p-value, it indicates strong evidence against the null hypothesis since there is less than a 5% probability that the null hypothesis is correct. 
 
-We decided to not use `total cs` for our hypothesis test because total cs correlates with the total gold a player has. We did three separate hypothesis tests for the three impact variables: KDA, damage to champions, and total gold. 
+We decided to drop `total cs` from our hypothesis test since total cs correlates with the total gold a player has. We then did three separate hypothesis tests for each of the three impact variables: KDA, damage to champions, and total gold. 
 
 **Results for KDA:** 
 - P-value: 0.0
-- Conclusion: Since the p-value is less than the significance level of 0.05, we reject the null hypothesis. All roles do not have the same average KDA z-score.
+- Conclusion: Since the p-value is less than the significance level of 0.05, we reject the null hypothesis. This indicates all roles do not have the same average KDA z-score.
 
 <p style="text-align:center"><iframe src="assets/hypo-test-kda.html" width=800 height=425 align='center' frameBorder=0></iframe></p>
 
 **Results for Damage to Champions:**
 - P-value: 0.0
-- Conclusion: Since the p-value is less than the significance level of 0.05, we reject the null hypothesis. All roles do not have the same average damage to champions z-score.
+- Conclusion: Since the p-value is less than the significance level of 0.05, we reject the null hypothesis. This further indicates all roles do not have the same average damage to champions z-score.
 
 <p style="text-align:center"><iframe src="assets/hypo-test-dmg.html" width=800 height=425 align='center' frameBorder=0></iframe></p>
 
 **Results for Total Gold:**
 - P-value: 0.0
-- Conclusion: Since the p-value is less than the significance level of 0.05, we reject the null hypothesis. All roles do not have the same average total gold z-score.
+- Conclusion: Since the p-value is less than the significance level of 0.05, we reject the null hypothesis. This again indicates all roles do not have the same average total gold z-score.
 
 <p style="text-align:center"><iframe src="assets/hypo-test-gold.html" width=800 height=425 align='center' frameBorder=0></iframe></p>
 
-Therefore, we reject the null hypothesis—all roles do not have the same impact overall. Since we know that all roles do not have the same impact overall, we shifted our focus to only look at one variable (damage to champions). We chose to use damage because we believe that the KDA statistic may not be a good statistic to use to compare as seen under [Interesting Aggregates](#interesting-aggregates). For example, a player could be focused on by the opposing team because they were being impactful. As a result, this would lower their KDA since that player could have a lot of deaths. We also did not use total gold because the gold obtained by players is used to buy items to deal more damage to the opposing team. Hence, we selected `damagetochampions` as the variable to use. 
+Based on the results presented above, we reject the null hypothesis—all roles do not seem to have the same impact overall. With this knowledge, we then shifted our focus to only one variable: damage to champions. We selected this variable to investigate further because we believe that the KDA statistic may not be as good of a comparison statistic as seen under [Interesting Aggregates](#interesting-aggregates). Additionally, we considered the fact that an opposing team may target the most impactful player which would increase that player's deaths and therefore decrease their KDA ratio. We also did not use total gold because the gold obtained by players is used to buy items to deal more damage to the opposing team. Hence, we selected `damagetochampions` as the variable to use. 
 
-Looking at the box plot titled: *Avg Stat Z-score for All Positions* under [Bivariate Analysis](#bivariate-analysis), we notice that middle and bottom are the only positions that have positive z-scores for all variables (KDA, total gold, total cs, damage to champions). We then asked a follow-up question: which role has more impact overall for damage to champions—bottom or middle? We conducted a one-tailed hypothesis test. 
+Looking at the box plot titled: *Avg Stat Z-score for All Positions* under [Bivariate Analysis](#bivariate-analysis), we notice that middle and bottom are the only positions that have positive z-scores for all variables (KDA, total gold, total cs, and damage to champions). We then asked a follow-up question: which role has more impact overall for damage to champions—bottom or middle? To answer this, we conducted a one-tailed hypothesis test. 
 
-Null hypothesis: Bottom and middle have the same average z-score for damage to champions. 
+**Null hypothesis:** Bottom and middle have the same average z-score for damage to champions. 
 
-Alternative hypothesis: Bottom has a higher average z-score for damage to champions than middle. 
+**Alternative hypothesis:** Bottom has a higher average z-score for damage to champions than middle. 
 - Test statistic: Difference in Mean
 - Significance Level: 5% (0.05)
 - Impact variable: Damage to Champions
@@ -193,6 +193,6 @@ We used the difference in mean as our test statistic because we are comparing qu
 
 **Results:**
 - P-value: 0.0
-- Conclusion: Since the p-value is less than the significance level of 0.05, we reject the null hypothesis. Bottom and middle do not have the same average z-score for damage to champions. 
+- Conclusion: Since the p-value is less than the significance level of 0.05, we reject the null hypothesis. This indicates bottom and middle do not have the same average z-score for damage to champions. 
 
 <p style="text-align:center"><iframe src="assets/hypo-test-dtc-diff3.html" width=800 height=425 align='center' frameBorder=0></iframe></p>
