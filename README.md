@@ -200,4 +200,4 @@ We used the difference in mean as our test statistic because we are comparing qu
 - P-value: 0.0
 - Conclusion: Since the p-value is less than the significance level of 0.05, we reject the null hypothesis. Bottom and middle do not have the same average z-score for damage to champions. 
 
-<p style="text-align:center"><iframe src="assets/hypo-test-dtc-diff.html" width=800 height=425 align='center' frameBorder=0></iframe></p>
+<p style="text-align:center"><iframe src="assets/hypo-test-dtc-diff2.html" width=800 height=425 align='center' frameBorder=0></iframe></p>
