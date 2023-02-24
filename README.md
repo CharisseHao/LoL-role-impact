@@ -140,7 +140,7 @@ Null Hypothesis: Distribution of `'position'` when `'killsat15'` is missing is t
 Alternative Hypothesis: Distribution of `'position'` when `'killsat15'` is missing is *not* the same as the distribution of `'position'` when `'killsat15'` is not missing
 Following the same steps as above, we plotted the distribution of `position` when `killsat15` is and is not missing. Then, we carried out a permutation test using TVD as the test statistic again.
 
-<iframe src="assets/missingness-plots/miss-position.html" width=800 height=375 frameBorder=0>
+<iframe src="assets/missingness-plots/miss-position.html" width=800 height=375 frameBorder=0></iframe>
 <iframe src="assets/missingness-plots/fig-empirical-position.html" width=800 height=425 frameBorder=0></iframe>
 
 By comparing the TVDs found through permutation testing to the observed TVD, we found the resulting p-value was 1. Since our p-value is greater than the significance level of 0.05, we fail to reject the null, and therefore it seems that the missingness in `killsat15` is *not* dependent on `position`
