@@ -102,9 +102,15 @@ Unlike the previous boxplot, there is a lot more variance in the distribution of
 
 
 ### Interesting Aggregates
+To further explore the distribution of z-scores and the pattern we noticed of middle and top consistently having higher z-scores, we decided to plot all positions’ z-scores for KDA and total damage to champions in an overlaid histogram. For the following plots, the x-axis represents the z-score, the y-axis represents the number of players that fall within each z-score bin, and each color corresponds to a certain role based on the legend - blue is top, red is jungle, green is middle, purple is bottom, and support is orange. 
+
 <iframe src="assets/int-agg-plots/int-fig-kda.html" width=800 height=400 frameBorder=0></iframe>
 
+This overlaid histogram seems to indicate that all roles have a similar spread in z-scores for KDA, contrasting to the plots we analyzed previously. Each bin appears to have a similar count for each role, and this conflicting observation led us to our null hypothesis: Do all roles have the same impact overall?
+
 <iframe src="assets/int-agg-plots/int-fig-dc.html" width=800 height=400 frameBorder=0></iframe>
+
+Unlike the preceding overlaid histogram, this plot supports the observation made in previous sections - support generally has the lowest z-scores while middle, bottom, and top have the highest z-scores. 
 
 
 ## Assessment of Missingness
