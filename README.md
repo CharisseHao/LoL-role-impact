@@ -127,11 +127,11 @@ Null Hypothesis: Distribution of `'datacompleteness'` when `'killsat15'` is miss
 Alternative Hypothesis: Distribution of `'datacompleteness'` when `'killsat15'` is missing is *not* the same as the distribution of `'datacompleteness'` when `'killsat15'` is not missing
 Included below is the graph portraying the distribution of `datacompleteness` when `killsat15` is and is not missing.
 
-<iframe src="assets/missingness-plots/miss-data-completeness.html" width=800 height=400 margin-left="auto" margin-right="auto" frameBorder=0></iframe>
+<iframe src="assets/missingness-plots/miss-data-completeness.html" width=800 height=350 margin-left="auto" margin-right="auto" frameBorder=0></iframe>
 
 We performed a permutation test to determine whether or not the missingness of `killsat15` was dependent on `datacompleteness` using total variation distance (TVD) as our test statistic. Below is the plot which illustrates the empirical distribution of the TVDs, with our observed TVD marked as a red vertical line.  
 
-<iframe src="assets/missingness-plots/fig-empirical-dc.html" width=800 height=400 frameBorder=0></iframe>
+<iframe src="assets/missingness-plots/fig-empirical-dc.html" width=800 height=425 frameBorder=0></iframe>
 
 From here, we calculated the p-value by comparing the observed TVD to the TVDs found through permutation testing, and the resulting p-value was 0. Since our p-value is less than the significance level of 0.05, we reject the null hypothesis, and therefore it seems that missingness in `killsat15` is dependent on `datacompleteness`.
 
@@ -140,8 +140,8 @@ Null Hypothesis: Distribution of `'position'` when `'killsat15'` is missing is t
 Alternative Hypothesis: Distribution of `'position'` when `'killsat15'` is missing is *not* the same as the distribution of `'position'` when `'killsat15'` is not missing
 Following the same steps as above, we plotted the distribution of `position` when `killsat15` is and is not missing. Then, we carried out a permutation test using TVD as the test statistic again.
 
-<p align="center"><iframe src="assets/missingness-plots/miss-position.html" width=800 height=400 frameBorder=0></iframe></p>
-<iframe src="assets/missingness-plots/fig-empirical-position.html" width=800 height=400 frameBorder=0></iframe>
+<p align="center"><iframe src="assets/missingness-plots/miss-position.html" width=800 height=350 frameBorder=0></iframe></p>
+<iframe src="assets/missingness-plots/fig-empirical-position.html" width=800 height=425 frameBorder=0></iframe>
 
 By comparing the TVDs found through permutation testing to the observed TVD, we found the resulting p-value was 1. Since our p-value is greater than the significance level of 0.05, we fail to reject the null, and therefore it seems that the missingness in `killsat15` is *not* dependent on `position`
 
@@ -160,19 +160,19 @@ We did three separate hypothesis tests for the three impact variables: KDA, dama
 - P-value: 0.0
 - Conclusion: since the p-value is less than the significance level of 0.05, we reject the null hypothesis. All roles do not have the same average KDA z-score.
 
-<iframe src="assets/hypo-test-kda.html" width=800 height=400 frameBorder=0></iframe>
+<iframe src="assets/hypo-test-kda.html" width=800 height=425 frameBorder=0></iframe>
 
 **Results for Damage to Champions:**
 - P-value: 0.0
 - Conclusion: since the p-value is less than the significance level of 0.05, we reject the null hypothesis. All roles do not have the same average damage to champions z-score.
 
-<iframe src="assets/hypo-test-dmg.html" width=800 height=400 frameBorder=0></iframe>
+<iframe src="assets/hypo-test-dmg.html" width=800 height=425 frameBorder=0></iframe>
 
 **Results for Total Gold:**
 - P-value: 0.0
 - Conclusion: since the p-value is less than the significance level of 0.05, we reject the null hypothesis. All roles do not have the same average total gold z-score.
 
-<iframe src="assets/hypo-test-gold.html" width=800 height=400 frameBorder=0></iframe>
+<iframe src="assets/hypo-test-gold.html" width=800 height=425 frameBorder=0></iframe>
 
 Therefore, we reject the null hypothesis—all roles do not have the same impact overall. Since we know that all roles do not have the same impact overall, we shifted our focus to only look at one variable (damage to champions). We chose to use damage because we believe that the KDA statistic may not be a good statistic to use to compare as seen under [Interesting Aggregates](#interesting-aggregates). For example, a player could be focused on by the opposing team because they were being impactful. As a result, this would lower their KDA since that player could have a lot of deaths. We also did not use total gold because the gold obtained by players is used to buy items to deal more damage to the opposing team. Hence, we selected `damagetochampions` as the variable to use. 
 
@@ -187,4 +187,4 @@ We used the difference in mean as our test statistic because we are comparing qu
 - P-value: 0.0
 - Conclusion: since the p-value is less than the significance level of 0.05, we reject the null hypothesis. Bottom and middle do not have the same average z-score for damage to champions. 
 
-<iframe src="assets/hypo-test-dtc-diff.html" width=800 height=400 frameBorder=0></iframe>
+<iframe src="assets/hypo-test-dtc-diff.html" width=800 height=425 frameBorder=0></iframe>
