@@ -121,6 +121,7 @@ When we first began exploring this dataset, we were interested in overall data a
 The first column we tested missingness against was the column `datacompleteness`.
 
 Null Hypothesis: Distribution of `'datacompleteness'` when `'killsat15'` is missing is the same as the distribution of `'datacompleteness'` when `'killsat15'` is not missing.
+
 Alternative Hypothesis: Distribution of `'datacompleteness'` when `'killsat15'` is missing is *not* the same as the distribution of `'datacompleteness'` when `'killsat15'` is not missing.
 
 Below is the graph portraying the distribution of `datacompleteness` when `killsat15` is and is not missing.
@@ -136,6 +137,7 @@ From here, we calculated the p-value by comparing the observed TVD to the TVDs f
 The second column we tested missingness against was the column `position`. 
 
 Null Hypothesis: Distribution of `'position'` when `'killsat15'` is missing is the same as the distribution of `'position'` when `'killsat15'` is not missing.
+
 Alternative Hypothesis: Distribution of `'position'` when `'killsat15'` is missing is *not* the same as the distribution of `'position'` when `'killsat15'` is not missing.
 
 Following the same steps as above, we plotted the distribution of `position` when `killsat15` is and is not missing. Then, we carried out a permutation test using TVD as the test statistic again.
