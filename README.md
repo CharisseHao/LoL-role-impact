@@ -1,6 +1,6 @@
 
 # Dominating the Rift: Uncovering the Most Impactful Position in League of Legends
-An UCSD DSC80 project analyzing the impact of different roles in League of Legends. 
+An UCSD DSC80 project analyzing the impact of different roles in League of Legends.
 
 Contributors: [Charisse Hao](https://www.linkedin.com/in/charisse-hao/) and [Nicole Zhang](https://www.linkedin.com/in/nicole-zhang-31a09122b/)
 
@@ -17,6 +17,7 @@ Contributors: [Charisse Hao](https://www.linkedin.com/in/charisse-hao/) and [Nic
     - [NMAR Analysis](#nmar-analysis)
     - [Missingness Dependency](#missingness-dependency)
 - [Hypothesis Testing](#hypothesis-testing)
+- [Concluding Note](#concluding-note)
 
 
 ## Introduction
@@ -198,3 +199,6 @@ We used the difference in mean as our test statistic because we are comparing qu
 - Conclusion: Since the p-value is less than the significance level of 0.05, we reject the null hypothesis. This indicates bottom and middle do not have the same average z-score for damage to champions. 
 
 <p style="text-align:center"><iframe src="assets/hypo-test-dtc-diff3.html" width=800 height=425 align='center' frameBorder=0></iframe></p>
+
+## Concluding Note
+Based on the results of the exploratory data analysis and hypothesis tests conducted in this project, we identified potential key variables that could be used to build a predictive model that predicts a player's role based on their game statistics in a separate project. To learn more about the predictive modeling process, please refer to our second project: [The Summoner's Oracle: Predicting League of Legends Player Positions](https://nzhang20.github.io/LoL-role-predictions/).
