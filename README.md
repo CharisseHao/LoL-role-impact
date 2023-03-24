@@ -1,6 +1,6 @@
 
 # Dominating the Rift: Uncovering the Most Impactful Position in League of Legends
-An UCSD DSC80 project analyzing the impact of different roles in League of Legends.
+A UCSD DSC80 project analyzing the impact of different roles in League of Legends.
 
 Contributors: [Charisse Hao](https://www.linkedin.com/in/charisse-hao/) and [Nicole Zhang](https://www.linkedin.com/in/nicole-zhang-31a09122b/)
 
